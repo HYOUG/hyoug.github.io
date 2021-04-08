@@ -16,42 +16,49 @@ body
     color: white;
 }
 
-.sidebar 
+.logo
 {
-    height: 100%;
-    width: 300px;
-    position: fixed;
-    margin: 0 0;
-    padding: 20px 0px 0px 20px;
-    top: 0;
-    left: 0;
-    
-    background-color: rgb(43, 51, 69);
-    color: white;
-    line-height: 100px;
-}
-
-.sidebar .logo
-{
+    position: relative;
+    top: 25px;
+    left: 25px;
+    margin-top: 500px;
     border: 10px solid;
-    padding: 5px 10px;
+    padding: 5px 15px;
 
     font-size: 50px;
     font-weight: bold;
     text-decoration: none;
 
     color: white;
-    background-color: transparent;
+    background-color: black;
+    mix-blend-mode: screen;
 
     cursor: pointer;
 
-    transition-duration: 500ms;
+    transition-duration: 250ms;
 }
 
-.sidebar .logo:hover
+.logo:hover,
+.logo:focus
 {
-    color:rgb(43, 51, 69);
+    color: black;
     background-color: white;
+}
+
+.sidebar 
+{
+    height: 100%;
+    width: 300px;
+    position: fixed;
+    margin: 50px 0;
+    padding: 20px 0px 0px 20px;
+    top: 1;
+    left: 0;
+    line-height: 100px;
+
+    background-color: black;
+    mix-blend-mode: screen;
+    
 }
 
 .sidebar .category
@@ -59,25 +66,26 @@ body
     position: relative;
 	border-radius: 10px;
     padding: 5px 10px;
+    left: 0;
 
     font-size: 50px;
     font-weight: bold;
     text-decoration: none;
 
     color: white;
-    background-color: transparent;
 
     cursor: pointer;
 
-    transition-duration: 1s;
-    transition: margin-left 1s;
-    
+    transition-property: left, color, background;
+    transition-duration: 250ms;
+    transition-delay: 0ms;
 }
 
-.sidebar .category:hover
+.sidebar .category:hover,
+.sidebar .category:focus
 {
-    /* left: +100px; */
-    color: rgb(43, 51, 69);
+    left: 25px;
+    color: black;
     background: white;
 }
 
