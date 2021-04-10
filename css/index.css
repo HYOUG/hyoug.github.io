@@ -11,88 +11,43 @@ html
 
 body 
 {
+    height: 100%;
+    margin: 0;
+    padding: 0;
     background-image: linear-gradient(to bottom, rgba(0, 208, 255, 1), rgba(0, 101, 255, 1));
     font-family: Gotham_Medium; 
     color: white;
 }
 
-.logo
+.wrapper
 {
-    position: relative;
-    top: 25px;
-    left: 25px;
-    margin-top: 500px;
-    border: 10px solid;
-    padding: 5px 15px;
-
-    font-size: 50px;
-    font-weight: bold;
-    text-decoration: none;
-
-    color: white;
-    background-color: black;
-    mix-blend-mode: screen;
-
-    cursor: pointer;
-
-    transition-duration: 250ms;
+    display: flex;
+    margin: 0;
 }
 
-.logo:hover,
-.logo:focus
-{
-    color: black;
-    background-color: white;
-}
 
-.sidebar 
-{
-    height: 100%;
-    width: 300px;
-    position: fixed;
-    margin: 50px 0;
-    padding: 20px 0px 0px 20px;
-    top: 1;
-    left: 0;
-    line-height: 100px;
-
-    background-color: black;
-    mix-blend-mode: screen;
-    
-}
-
-.sidebar .category
-{
-    position: relative;
-	border-radius: 10px;
-    padding: 5px 10px;
-    left: 0;
-
-    font-size: 50px;
-    font-weight: bold;
-    text-decoration: none;
-
-    color: white;
-
-    cursor: pointer;
-
-    transition-property: left, color, background;
-    transition-duration: 250ms;
-    transition-delay: 0ms;
-}
-
-.sidebar .category:hover,
-.sidebar .category:focus
-{
-    left: 25px;
-    color: black;
-    background: white;
-}
 
 .main
 {
-    margin-left: 400px;
+    top: 0;
+    left: 1;
+    margin-left: 350px;
+    height: 100%;
 }
 
+.title
+{
+    font-size: 50px;
+    padding-bottom: 1px;
+    border-bottom-style: solid;
+    border-bottom-width: 5px;
+    width: fit-content;
+    margin: 20px 0;
+}
 
-
+p 
+{
+    margin: 0;
+    font-size: 20px;
+    font-style: normal;
+}

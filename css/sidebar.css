@@ -1,0 +1,71 @@
+.sidebar 
+{
+    height: max-content;
+    width: 300px;
+    /* position: -webkit-sticky; */
+    position: absolute;
+    margin: 0;
+    padding: 20px;
+    top: 0;
+    left: 0;
+    line-height: 100px;
+
+    background-color: black;
+    mix-blend-mode: screen;
+    
+}
+
+.logo
+{
+    position: relative;
+    top: 0;
+    left: 0;
+    border: 10px solid;
+    padding: 5px 15px;
+
+    font-size: 50px;
+    font-weight: bold;
+    text-decoration: none;
+
+    color: white;
+    background-color: black;
+    mix-blend-mode: screen;
+
+    cursor: pointer;
+
+    transition-duration: 250ms;
+}
+
+.logo:hover,
+.logo:focus
+{
+    color: black;
+    background-color: white;
+}
+
+.category
+{
+    display: inline;
+    position: relative;
+	border-radius: 10px;
+    padding: 20px;
+    margin-top: 20px;
+
+    font-size: 40px;
+    font-weight: bold;
+    text-decoration: none;
+
+    color: white;
+
+    cursor: pointer;
+
+    transition-property: left, color, background;
+    transition-duration: 250ms;
+}
+
+.category:hover,
+.category:focus
+{
+    color: black;
+    background: white;
+}
