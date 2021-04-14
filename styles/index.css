@@ -1,0 +1,68 @@
+html 
+{
+    min-height: 100%;
+}
+
+@font-face 
+{
+    font-family: Gotham_Medium;
+    src: url("../fonts/Gotham Medium.otf");
+}
+
+body 
+{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Gotham_Medium; 
+    color: white;
+    overflow: overlay;
+}
+
+.wrapper
+{
+    display: flex;
+    margin: 0;
+    background-image: linear-gradient(to bottom, rgba(0, 208, 255, 1), rgba(0, 101, 255, 1));
+}
+
+.main
+{
+    top: 1;
+    left: 1;
+    margin: 50px;
+    height: fit-content;
+}
+
+.header
+{
+    top: 0;
+    left: 1;
+    float: none;
+    height: fit-content;
+    font-size: 40px;
+    font-weight: bolder;
+    text-align: center;
+}
+
+
+.core
+{
+    font-weight: normal;
+}
+
+h2
+{
+    font-size: 50px;
+    padding-bottom: 1px;
+    border-bottom-style: solid;
+    border-bottom-width: 5px;
+    width: fit-content;
+    margin: 20px 0;
+}
+
+p 
+{
+    margin: 10px;
+    font-size: 20px;
+}

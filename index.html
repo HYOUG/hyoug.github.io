@@ -1,17 +1,20 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="shortcut icon" type="image/icon" href="img/favicon.ico"/>
+        <link rel="shortcut icon" type="image/icon" href="images/favicon.ico"/>
         <meta charset="utf-8">
-        <link href="css/index.css" rel="stylesheet">
-        <link href="css/sidebar.css" rel="stylesheet">
+        <link href="styles/index.css" rel="stylesheet">
+        <link href="styles/sidebar.css" rel="stylesheet">
+        <link href="styles/scrollbar.css" rel="stylesheet">
+        <link href="styles/scrollbutton.css" rel="stylesheet">
         <title>Hugo "HYOUG" Junior</title>
     </head>
     <body>
         <div class="wrapper">
+
             <!-- sidebar -->
             <div class="sidebar">
-                <a class="logo" href="#top">HYOUG</a>
+                <a class="logo">HYOUG</a>
                 <a class="category" href="#about">About Me</a>
                 <a class="category" href="#skills">Skills</a>
                 <a class="category" href="#portfolio">Portfolio</a>
@@ -20,35 +23,53 @@
 
             <!-- main content -->
             <div class="main">
-                <h1 class="title" id="about">About Me</h1>
-                <p>Et prima post Osdroenam quam, ut dictum est,
-                ab hac descriptione discrevimus, Commagena, nunc
-                Euphratensis, clementer adsurgit, Hierapoli, 
-                vetere Nino et Samosata civitatibus amplis 
-                inlustris.</p>
 
-                <h1 class="title" id="skills">Skills</h1>
-                <p>Et prima post Osdroenam quam, ut dictum est,
-                ab hac descriptione discrevimus, Commagena, nunc
-                Euphratensis, clementer adsurgit, Hierapoli, 
-                vetere Nino et Samosata civitatibus amplis 
-                inlustris.</p>
+                <!-- header -->
+                <div class="header">
+                    <h1>Hugo "HYOUG" Junior</h1>
+                </div>
 
-                <h1 class="title" id="portfolio">Portfolio</h1>
-                <p>Et prima post Osdroenam quam, ut dictum est,
-                ab hac descriptione discrevimus, Commagena, nunc
-                Euphratensis, clementer adsurgit, Hierapoli, 
-                vetere Nino et Samosata civitatibus amplis 
-                inlustris.</p>
+                <div class="core">
+                    <h2 id="about">About Me</h2>
+                    <p>Et prima post Osdroenam quam, ut dictum est,
+                    ab hac descriptione discrevimus, Commagena, nunc
+                    Euphratensis, clementer adsurgit, Hierapoli, 
+                    vetere Nino et Samosata civitatibus amplis 
+                    inlustris.</p>
 
-                <h1 class="title" id="contact">Contact</h1>
-                <p>Et prima post Osdroenam quam, ut dictum est,
-                ab hac descriptione discrevimus, Commagena, nunc
-                Euphratensis, clementer adsurgit, Hierapoli, 
-                vetere Nino et Samosata civitatibus amplis 
-                inlustris.</p>
+                    <h2 id="skills">Skills</h2>
+                    <p>Et prima post Osdroenam quam, ut dictum est,
+                    ab hac descriptione discrevimus, Commagena, nunc
+                    Euphratensis, clementer adsurgit, Hierapoli, 
+                    vetere Nino et Samosata civitatibus amplis 
+                    inlustris.</p>
 
-                <p>Lorem Ipsum motim enis latinus randomix</p>
+                    <h2 id="portfolio">Portfolio</h2>
+                    <p>Et prima post Osdroenam quam, ut dictum est,
+                    ab hac descriptione discrevimus, Commagena, nunc
+                    Euphratensis, clementer adsurgit, Hierapoli, 
+                    vetere Nino et Samosata civitatibus amplis 
+                    inlustris.</p>
+
+                    <h2 id="contact">Contact</h2>
+                    <p>Et prima post Osdroenam quam, ut dictum est,
+                    ab hac descriptione discrevimus, Commagena, nunc
+                    Euphratensis, clementer adsurgit, Hierapoli, 
+                    vetere Nino et Samosata civitatibus amplis 
+                    inlustris.</p>
+
+                    <p>Lorem Ipsum motim enis latinus randomix</p>
+
+                    <!-- scroll-to-top button -->
+                    <button id="scrollButton">☝️</button>
+
+                </div>
+                
+                <!-- footer -->
+                <footer></footer>
+
+                <!-- JS script -->
+                <script src="scripts/index.js" type="text/javascript"></script>
             </div>
         </div>
     </body>
