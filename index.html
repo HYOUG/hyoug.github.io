@@ -5,6 +5,7 @@
         <meta charset="utf-8">
         <link href="styles/index.css" rel="stylesheet">
         <link href="styles/sidebar.css" rel="stylesheet">
+        <link href="styles/darkswitch.css" rel="stylesheet">
         <link href="styles/scrollbar.css" rel="stylesheet">
         <link href="styles/scrollbutton.css" rel="stylesheet">
         <title>Hugo "HYOUG" Junior</title>
@@ -18,7 +19,12 @@
                 <a class="category" href="#about">About Me</a>
                 <a class="category" href="#skills">Skills</a>
                 <a class="category" href="#portfolio">Portfolio</a>
-                <a class="category" href="#contact">Contact</a>
+                <a class="category" href="#contact">Contact</a><br/>
+                <img src="images/dark_mode_logo.png" alt="Dark mode" id="darkmode"/>
+                <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                </label>
             </div>
 
             <!-- main content -->
@@ -26,40 +32,49 @@
 
                 <!-- header -->
                 <div class="header">
-                    <h1>👋 Hugo "HYOUG" Junior</h1>
+                    <h1>👋 I'm Hugo "HYOUG" Junior,<br/>a young  developer.</h1>
                 </div>
 
                 <div class="core">
                     <h2 id="about">👤 About Me</h2>
+                    <h3 ><span id="problematic">Who am I ?</span></h3>
                     <p>Et prima post Osdroenam quam, ut dictum est,
                     ab hac descriptione discrevimus, Commagena, nunc
                     Euphratensis, clementer adsurgit, Hierapoli, 
                     vetere Nino et Samosata civitatibus amplis 
                     inlustris.</p>
-                    <div class="gap_100px"></div>
+
+                    <div class="gap"></div>
 
                     <h2 id="skills">🧮 Skills</h2>
+                    <h3 ><span id="problematic">What do I know ?</span></h3>
                     <p>Et prima post Osdroenam quam, ut dictum est,
                     ab hac descriptione discrevimus, Commagena, nunc
                     Euphratensis, clementer adsurgit, Hierapoli, 
                     vetere Nino et Samosata civitatibus amplis 
                     inlustris.</p>
-                    <div class="gap_100px"></div>
+
+                    <div class="gap"></div>
 
                     <h2 id="portfolio">✨ Portfolio</h2>
+                    <h3 ><span id="problematic">What did I do ?</span></h3>
                     <p>Et prima post Osdroenam quam, ut dictum est,
                     ab hac descriptione discrevimus, Commagena, nunc
                     Euphratensis, clementer adsurgit, Hierapoli, 
                     vetere Nino et Samosata civitatibus amplis 
                     inlustris.</p>
-                    <div class="gap_100px"></div>
+
+                    <div class="gap"></div>
 
                     <h2 id="contact">📩 Contact</h2>
+                    <h3 ><span id="problematic">How to reach to me ?</span></h3>
                     <p>Et prima post Osdroenam quam, ut dictum est,
                     ab hac descriptione discrevimus, Commagena, nunc
                     Euphratensis, clementer adsurgit, Hierapoli, 
                     vetere Nino et Samosata civitatibus amplis 
                     inlustris.</p>
+
+                    <div class="gap"></div>
 
                     <!-- scroll-to-top button -->
                     <button id="scrollButton">☝️</button>
@@ -67,7 +82,13 @@
                 </div>
                 
                 <!-- footer -->
-                <footer></footer>
+                <footer>
+                    <a href="https://github.com/HYOUG"><span class="custom_underline">Made with 💙 by me</span></a>
+                    &nbsp; • &nbsp;
+                    <a href="https://pages.github.com/"><span class="custom_underline">Hosted with 🖤 by Github</span></a>
+                    &nbsp; • &nbsp;
+                    <a href="https://github.com/HYOUG/hyoug.github.io"><span class="custom_underline">Source Code 🔓</span></a>
+                </footer>
 
                 <!-- JS script -->
                 <script src="scripts/index.js" type="text/javascript"></script>
