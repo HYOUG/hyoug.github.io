@@ -1,5 +1,7 @@
-.sidebar 
-{
+.sidebar  {
+    display: flex;
+    flex-direction: column;
+
     height: max-content;
     width: 300px;
     position: -webkit-sticky;
@@ -8,25 +10,24 @@
     padding: 20px;
     top: 0;
     left: 0;
-    line-height: 100px;
 
     background-color: black;
     mix-blend-mode: screen;
     
 }
 
-.logo
-{
+.logo {
     position: relative;
-    top: 0;
-    left: 0;
+    width: 210px;
+    height: 75px;
     border: 10px solid;
-    padding: 5px 15px;
+    margin-bottom: 20px;
 
     font-size: 50px;
     font-weight: bold;
     text-decoration: none;
-
+    text-align: center;
+    line-height: 80px;
     color: white;
     background-color: black;
     mix-blend-mode: screen;
@@ -36,41 +37,33 @@
     transition-duration: 250ms;
 }
 
-.logo:hover,
-.logo:focus
-{
+.logo:hover, .logo:focus {
     color: black;
     background-color: white;
 }
 
-.category
-{
-    display: inline;
+.category {
     position: relative;
 	border-radius: 10px;
     padding: 20px;
-    margin-top: 20px;
+    margin: 10px 0px;
 
     font-size: 35px;
     font-weight: bold;
     text-decoration: none;
-
+    line-height: 30px;
     color: white;
 
     cursor: pointer;
-
-    transition-property: left, color, background;
+    
     transition-duration: 250ms;
 }
 
-.category:hover,
-.category:focus
-{
+.category:hover, .category:focus {
     color: black;
     background: white;
 }
 
-.category:focus
-{
+.category:focus {
     outline: none;
 }

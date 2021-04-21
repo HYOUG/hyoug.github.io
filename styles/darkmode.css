@@ -1,0 +1,27 @@
+#darkMode {
+  border-top: white 5px solid;
+  padding-top: 30px;
+  width: fit-content;
+
+  display: flex;
+  align-items: center;
+}
+
+#darkMode label {
+  font-size: 25px;
+  color: white;
+}
+
+#darkModeSwitch {
+  width: 25px;
+  height: 25px;
+  margin-left: 30px;
+  padding: 5px;
+
+  border: white solid 4px;
+  border-radius: 10px;
+  outline: white solid 7px;
+  outline-offset: -10px;
+  
+  cursor: pointer;
+}
