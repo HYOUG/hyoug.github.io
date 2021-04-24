@@ -1,5 +1,3 @@
-/* fonts */
-
 @font-face {
     font-family: "Gotham";
     src: url("../fonts/Gotham_Medium.otf");
@@ -15,7 +13,6 @@
     src: url("../fonts/Retro_Gaming.ttf");
 }
 
-/* selection style */
 
 h1::selection, h2::selection, p::selection {
     background-color: white;
@@ -33,6 +30,7 @@ body {
     font-family: "Gotham"; 
     color: white;
     overflow: overlay;
+    scroll-behavior: smooth;
 }
 
 .wrapper {
@@ -61,19 +59,20 @@ body {
 
 .header h1 {
     margin: 0;
+    padding: 0;
     padding: 20px;
 }
 
 .core {
-    padding: 70px;
+    padding: 70px 75px;
 }
 
-h2 {
+.infoTitle {
     font-size: 50px;
     margin: 0;
 }
 
-h3 {
+.infoProblematic {
     font-family: "Ubuntu";
     font-size: 30px;
     font-style: italic;

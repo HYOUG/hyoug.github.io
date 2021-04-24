@@ -1,6 +1,16 @@
 # hyoug.github.io
-My personal website (info, portfolio, contact)
+My personal website (HTML, CSS, JS).
 
-## Features
+## ❓ Informations
+* About Me
+* Skills
+* Portfolio
+* Contact
 
-## License
+## 🕹️ Features
+* sidebar
+* dark mode
+* super cool easter egg
+
+## 📜 License
+[MIT](https://choosealicense.com/licenses/mit/) (2021) License protected project.

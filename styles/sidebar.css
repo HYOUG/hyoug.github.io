@@ -16,7 +16,7 @@
     
 }
 
-.logo {
+#websiteLogo {
     position: relative;
     width: 210px;
     height: 75px;
@@ -37,12 +37,12 @@
     transition-duration: 250ms;
 }
 
-.logo:hover, .logo:focus {
+#websiteLogo:hover, #websiteLogo:focus {
     color: black;
     background-color: white;
 }
 
-.category {
+.categoryShortcut {
     position: relative;
 	border-radius: 10px;
     padding: 20px;
@@ -59,7 +59,7 @@
     transition-duration: 250ms;
 }
 
-.category:hover, .category:focus {
+.categoryShortcut:hover, .categoryShortcut:focus {
     color: black;
     background: white;
 }
