@@ -10,7 +10,7 @@ My personal website (HTML, CSS, JS).
 ## 🕹️ Features
 * sidebar
 * dark mode
-* super cool easter egg
+* super cool easter eggs
 
 ## 📜 License
 [MIT](https://choosealicense.com/licenses/mit/) (2021) License protected project.

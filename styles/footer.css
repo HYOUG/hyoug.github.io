@@ -4,7 +4,7 @@ footer {
     text-align: center;
 }
 
-.custom_underline {
+footer u {
     text-decoration: underline;
     text-decoration-thickness: 3px;
     text-underline-offset: 5px;   

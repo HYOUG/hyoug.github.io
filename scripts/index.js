@@ -1,5 +1,7 @@
 // variables
 var rootElement = document.documentElement;
+var bodyElement = document.body;
+var documentHeight = Math.max(bodyElement.scrollHeight, bodyElement.offsetHeight, rootElement.clientHeight, rootElement.scrollHeight, rootElement.offsetHeight);
 
 var favicon = document.getElementById("favicon")
 var background = document.getElementById("wrapper");
@@ -12,9 +14,11 @@ var infoProblematics = document.getElementsByTagName("h3");
 
 var darkModeEnabled = false;
 var konamiCodeChars = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65];
+var colorLayer = document.createElement("div");
 var charList = [];
 var musics = [];
 var clickableElList = [];
+var DarkModeSwitchNum = 0;
 
 musics.push(new Audio("sounds/doom_theme.mp3"));
 musics.push(new Audio("sounds/pac_man_theme.mp3"));
@@ -25,6 +29,21 @@ clickableElList.push(document.getElementsByTagName("a"));
 clickableElList.push(document.getElementById("websiteLogo"));
 clickableElList.push(document.getElementById("darkModeSwitch"));
 clickableElList.push(document.getElementById("scrollButton"));
+
+console.log(document.body.offsetHeight);
+
+colorLayer.id = "colorLayer";
+colorLayer.style.position = "absolute";
+colorLayer.style.flex = "1";
+colorLayer.style.zIndex = "10";
+colorLayer.style.pointerEvents = "none";
+colorLayer.style.top = "0";
+colorLayer.style.left = "0";
+colorLayer.style.width = "100%";                 // need to fix
+colorLayer.style.height = documentHeight + "px";      // //
+colorLayer.style.overflow = "auto";
+colorLayer.style.backgroundColor = "rgba(0, 255, 0, 1)";
+colorLayer.style.mixBlendMode = "multiply";
 
 
 // utils functions
@@ -44,19 +63,24 @@ function scrollToEl(el) {
 
 function darkMode() {
   darkModeEnabled = !darkModeEnabled;
+  DarkModeSwitchNum++;
 
   if (darkModeEnabled) {
     darkModeSwitch.style.outline = "none"
-    darkModeSwitch.src = "images/dark_mode_logo_off.png";
+    darkModeSwitch.src = "images/dark_mode/dark_mode_logo_off.png";
     background.style.backgroundImage = "linear-gradient(to bottom, rgb(0, 0, 10), rgb(44, 47, 51))";
-    document.body.style.color = "rgb(177, 177, 177)";}
-    
-    else {
+    document.body.style.color = "rgb(177, 177, 177)";
+  }  
+  else {
     darkModeSwitch.style.outline = "7px solid white";
     darkModeSwitch.style.outlineOffset = "-10px"
-    darkModeSwitch.src = "images/dark_mode_logo_on.png";
+    darkModeSwitch.src = "images/dark_mode/dark_mode_logo_on.png";
     background.style.backgroundImage = "linear-gradient(to bottom, rgb(0, 208, 255), rgb(0, 101, 255))";
     document.body.style.color = "rgb(255, 255, 255)";
+  }
+
+  if (DarkModeSwitchNum >= 5) {
+    alert("Every year, thousand of people die from epilepsy. So, STOP SPAMMING GOD DAMN IT !")
   }
 }
 
@@ -70,11 +94,12 @@ function konamiCode(event) {
   if (_.isEqual(charList, konamiCodeChars)) {
     randomItem(musics).play();
 
-    favicon.href = "images/icons/favicon_8bits.ico";
+    document.title = "HUGO_HYOUG_JUNIOR";
+    favicon.href = "images/favicons/favicon_8bits.ico";
 
     background.style.backgroundImage = "none";
     background.style.backgroundColor = "rgb(0, 0, 0)";
-    document.body.style.color = "rgb(0, 255, 0)";
+    document.body.appendChild(colorLayer);
 
     document.body.style.fontFamily = "Gaming";
     for (i=0; i < infoProblematics; i++) {

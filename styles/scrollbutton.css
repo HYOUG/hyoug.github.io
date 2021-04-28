@@ -19,7 +19,7 @@
 }
 
 #scrollButton:hover {
-    background-color: #cfcfcf;
+    background-color: rgb(200, 200, 200);
 }
 
 #scrollButton:focus {
