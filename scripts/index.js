@@ -1,7 +1,6 @@
 // variables
 var rootElement = document.documentElement;
 var bodyElement = document.body;
-var documentHeight = Math.max(bodyElement.scrollHeight, bodyElement.offsetHeight, rootElement.clientHeight, rootElement.scrollHeight, rootElement.offsetHeight);
 
 var favicon = document.getElementById("favicon")
 var background = document.getElementById("wrapper");
@@ -14,11 +13,11 @@ var infoProblematics = document.getElementsByTagName("h3");
 
 var darkModeEnabled = false;
 var konamiCodeChars = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65];
-var colorLayer = document.createElement("div");
 var charList = [];
 var musics = [];
 var clickableElList = [];
 var DarkModeSwitchNum = 0;
+var colorLayer = document.createElement("div");
 
 musics.push(new Audio("sounds/doom_theme.mp3"));
 musics.push(new Audio("sounds/pac_man_theme.mp3"));
@@ -30,25 +29,14 @@ clickableElList.push(document.getElementById("websiteLogo"));
 clickableElList.push(document.getElementById("darkModeSwitch"));
 clickableElList.push(document.getElementById("scrollButton"));
 
-console.log(document.body.offsetHeight);
-
-colorLayer.id = "colorLayer";
-colorLayer.style.position = "absolute";
-colorLayer.style.flex = "1";
-colorLayer.style.zIndex = "10";
-colorLayer.style.pointerEvents = "none";
-colorLayer.style.top = "0";
-colorLayer.style.left = "0";
-colorLayer.style.width = "100%";                 // need to fix
-colorLayer.style.height = documentHeight + "px";      // //
-colorLayer.style.overflow = "auto";
-colorLayer.style.backgroundColor = "rgba(0, 255, 0, 1)";
-colorLayer.style.mixBlendMode = "multiply";
-
 
 // utils functions
 function randomItem(array) {
   return array[Math.floor(Math.random()* array.length)];
+}
+
+function maxDocumentHeight() {
+  return Math.max(bodyElement.scrollHeight, bodyElement.offsetHeight, rootElement.clientHeight, rootElement.scrollHeight, rootElement.offsetHeight);
 }
 
 
@@ -99,7 +87,6 @@ function konamiCode(event) {
 
     background.style.backgroundImage = "none";
     background.style.backgroundColor = "rgb(0, 0, 0)";
-    document.body.appendChild(colorLayer);
 
     document.body.style.fontFamily = "Gaming";
     for (i=0; i < infoProblematics; i++) {
@@ -117,6 +104,22 @@ function konamiCode(event) {
     for (i=0; i < categoryShortcuts.length; i++) {
       categoryShortcuts[i].style.borderRadius = "0"
     }
+
+    setTimeout(function() {                                 // the color layer must be delayed to get the up-to-date document height
+      colorLayer.id = "colorLayer";
+      colorLayer.style.position = "absolute";
+      colorLayer.style.flex = "1";
+      colorLayer.style.zIndex = "10";
+      colorLayer.style.pointerEvents = "none";
+      colorLayer.style.top = "0";
+      colorLayer.style.left = "0";
+      colorLayer.style.width = "100%";                      // need to fix
+      colorLayer.style.height = maxDocumentHeight() + "px";      // //
+      colorLayer.style.overflow = "auto";
+      colorLayer.style.backgroundColor = "rgba(0, 255, 0, 1)";
+      colorLayer.style.mixBlendMode = "multiply";
+      document.body.appendChild(colorLayer);
+    }, 50)
   }
 }
 
