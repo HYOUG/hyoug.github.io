@@ -17,7 +17,8 @@ var charList = [];
 var musics = [];
 var clickableElList = [];
 var DarkModeSwitchNum = 0;
-var colorLayer = document.createElement("div");
+var easterEggLayer = document.createElement("div");
+var darkModeLayer = document.createElement("div");
 
 musics.push(new Audio("sounds/doom_theme.mp3"));
 musics.push(new Audio("sounds/pac_man_theme.mp3"));
@@ -56,19 +57,31 @@ function darkMode() {
   if (darkModeEnabled) {
     darkModeSwitch.style.outline = "none"
     darkModeSwitch.src = "images/dark_mode/dark_mode_logo_off.png";
-    background.style.backgroundImage = "linear-gradient(to bottom, rgb(0, 0, 10), rgb(44, 47, 51))";
-    document.body.style.color = "rgb(177, 177, 177)";
+    setTimeout(function() {                                 // the color layer must be delayed to get the up-to-date document height
+      darkModeLayer.id = "darkModeLayer";
+      darkModeLayer.style.position = "absolute";
+      darkModeLayer.style.flex = "1";
+      darkModeLayer.style.zIndex = "10";
+      darkModeLayer.style.pointerEvents = "none";
+      darkModeLayer.style.top = "0";
+      darkModeLayer.style.left = "0";
+      darkModeLayer.style.width = "100%";                      // need to fix
+      darkModeLayer.style.height = maxDocumentHeight() + "px";      // //
+      darkModeLayer.style.overflow = "auto";
+      darkModeLayer.style.backgroundColor = "rgba(97, 97, 97, 1)";
+      darkModeLayer.style.mixBlendMode = "multiply";
+      document.body.appendChild(darkModeLayer);
+    }, 100)
   }  
   else {
     darkModeSwitch.style.outline = "7px solid white";
     darkModeSwitch.style.outlineOffset = "-10px"
     darkModeSwitch.src = "images/dark_mode/dark_mode_logo_on.png";
-    background.style.backgroundImage = "linear-gradient(to bottom, rgb(0, 208, 255), rgb(0, 101, 255))";
-    document.body.style.color = "rgb(255, 255, 255)";
+    darkModeLayer.remove();
   }
 
-  if (DarkModeSwitchNum >= 5) {
-    alert("Every year, thousand of people die from epilepsy. So, STOP SPAMMING GOD DAMN IT !")
+  if (DarkModeSwitchNum == 5) {
+    alert("stop this rn.")
   }
 }
 
@@ -106,20 +119,20 @@ function konamiCode(event) {
     }
 
     setTimeout(function() {                                 // the color layer must be delayed to get the up-to-date document height
-      colorLayer.id = "colorLayer";
-      colorLayer.style.position = "absolute";
-      colorLayer.style.flex = "1";
-      colorLayer.style.zIndex = "10";
-      colorLayer.style.pointerEvents = "none";
-      colorLayer.style.top = "0";
-      colorLayer.style.left = "0";
-      colorLayer.style.width = "100%";                      // need to fix
-      colorLayer.style.height = maxDocumentHeight() + "px";      // //
-      colorLayer.style.overflow = "auto";
-      colorLayer.style.backgroundColor = "rgba(0, 255, 0, 1)";
-      colorLayer.style.mixBlendMode = "multiply";
-      document.body.appendChild(colorLayer);
-    }, 50)
+      easterEggLayer.id = "easterEggLayer";
+      easterEggLayer.style.position = "absolute";
+      easterEggLayer.style.flex = "1";
+      easterEggLayer.style.zIndex = "10";
+      easterEggLayer.style.pointerEvents = "none";
+      easterEggLayer.style.top = "0";
+      easterEggLayer.style.left = "0";
+      easterEggLayer.style.width = "100%";                      // need to fix
+      easterEggLayer.style.height = maxDocumentHeight() + "px";      // //
+      easterEggLayer.style.overflow = "auto";
+      easterEggLayer.style.backgroundColor = "rgba(0, 255, 0, 1)";
+      easterEggLayer.style.mixBlendMode = "multiply";
+      document.body.appendChild(easterEggLayer);
+    }, 100)
   }
 }
 

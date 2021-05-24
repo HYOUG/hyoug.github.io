@@ -2,7 +2,7 @@
 My personal website (HTML, CSS, JS).
 
 ## ❓ Informations
-* About Me
+* Bio
 * Skills
 * Portfolio
 * Contact
