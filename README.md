@@ -1,5 +1,5 @@
 # hyoug.github.io
-My personal website (HTML, CSS, JS).
+My personal portfolio made in HTML, CSS and JS.
 
 ## ❓ Informations
 * Bio
