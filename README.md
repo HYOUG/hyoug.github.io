@@ -4,7 +4,7 @@ My personal portfolio made in HTML, CSS and JS.
 ## ❓ Informations
 * Bio
 * Skills
-* Portfolio
+* Projects
 * Contact
 
 ## 🕹️ Features
